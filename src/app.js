@@ -66,6 +66,8 @@ app.get('/weather', (req, res) => {
 			res.send({
 				location: location,
 				forecast: 'It is currently ' + forecastData.temperature + ' degrees out. But, it feels alike ' + forecastData.feelslike,
+				obsrvTime: 'Temperature is observed at Time ' + forecastData.observeTime,
+				prediction: 'Prediction is ' + forecastData.description,
 				address : req.query.address
 			}); 
 		});
